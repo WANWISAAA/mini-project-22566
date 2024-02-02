@@ -4,11 +4,12 @@ $username = "root";
 $password = "";
 $dbname = "blog-app";
 
-//1.Creat datsbase connection
-$conn = mysqli_connect($host, $username, $password,);
+//1.Create database connection
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
+//2.Check database connection
 if (!$conn) {
-    die("mysqli_connect_failed". mysqli_connect_error());
-}else{
-    print"conected successfully";
+    die("Connection failed" . mysqli_connect_error());
+} else {
+    print "Connected successfully";
 }
